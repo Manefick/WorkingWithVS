@@ -24,6 +24,7 @@ namespace WorkingWithVS
         {
         
             app.UseRouting();
+            app.UseDeveloperExceptionPage();
 
             app.UseEndpoints(endpoints =>
             {

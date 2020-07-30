@@ -11,7 +11,7 @@ namespace WorkingWithVS.Controllers
     {
         public IActionResult Index()
         {
-            return View(SimpleRepository.SharedRepository.Products);
+            return View(SimpleRepository.SharedRepository.Products.Where(p=>p.Price<50));
         }
     }
 }

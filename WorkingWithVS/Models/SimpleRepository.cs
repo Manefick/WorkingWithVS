@@ -9,7 +9,7 @@ namespace WorkingWithVS.Models
     {
         private static SimpleRepository sharedRepository = new SimpleRepository();
         private Dictionary<string, Product> products = new Dictionary<string, Product>();
-        public static SimpleRepository SharedRepository => sharedRepository;
+        public static SimpleRepository SharedRepository => sharedRepository;//Where is area and methods
         public SimpleRepository()
         {
             var initalItem = new[]
@@ -21,7 +21,7 @@ namespace WorkingWithVS.Models
             };
             foreach(var p in initalItem)
             {
-
+                AddProduct(p);
             }
         }
         public IEnumerable<Product> Products => products.Values;
